@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Journal</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+    <div class="container">
+        <div class="weather-card">
+            <h2>Weather Journal App</h2>
+            <div class="message" id="message"></div>
+            <div class="input-section">
+                <label for="country">Select Country</label>
+                <select id="country"></select>
+
+                <label for="zip">Enter Zip Code</label>
+                <input type="text" id="zip" placeholder="Enter ZIP code here">
+
+                <label for="feelings">How are you feeling today?</label>
+                <textarea id="feelings" placeholder="Enter your feelings here"></textarea>
+                <button id="generate">Generate</button>
+            </div>
+        </div>
+        <div class="result-card">
+            <h3>Most Recent Entry</h3>
+            <div class="result-content" id="entryHolder">
+                <div>Date: <span class="data" id="dateDisplay"></span></div>
+                <div>Temperature: <span class="data" id="tempDisplay"></span></div>
+                <div>Feels Like: <span class="data" id="feelsLikeDisplay"></span></div>
+                <div>Weather: <span class="data" id="weatherDisplay"></span></div>
+                <div>Pressure: <span class="data" id="pressureDisplay"></span></div>
+                <div>Humidity: <span class="data" id="humidityDisplay"></span></div>
+                <div>Wind Speed: <span class="data" id="windDisplay"></span></div>
+                <div>Feelings: <span class="data" id="contentDisplay"></span></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="module" src="app.js"></script>
+</body>
+</html>
