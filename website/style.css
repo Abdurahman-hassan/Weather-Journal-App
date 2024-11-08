@@ -1,0 +1,187 @@
+/* General Styles */
+body {
+    background: #f9fafb;
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Container */
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Card Styles */
+.weather-card, .result-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    padding: 25px;
+    text-align: center;
+}
+
+h2, h3 {
+    margin: 0 0 20px;
+    font-weight: 700;
+    color: #333;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.input-field, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Oswald', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.input-field:focus, select:focus, textarea:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background: #4a90e2;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #357ab8;
+}
+
+/* Result Card */
+.result-card .data {
+    color: #4a90e2;
+    font-weight: bold;
+}
+
+.result-content div {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+/* Message */
+.message {
+    color: #d9534f;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+
+
+/* Responsive Layout */
+
+/* Very Small Screens (mobile phones in portrait mode) */
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .weather-card, .result-card {
+        padding: 20px;
+        font-size: 14px;
+    }
+}
+
+.result-card {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slight white overlay to soften */
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Background image with low opacity */
+.result-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: var(--background-image);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    z-index: -1;
+    filter: blur(5px); /* Optional: Slight blur effect for a softer look */
+    border-radius: 10px; /* Matches the result card border-radius */
+}
+
+
+
+/* Small Screens (mobile phones in landscape mode) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+/* Medium Screens (tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr;
+        max-width: 80%;
+    }
+
+    .weather-card, .result-card {
+        padding: 25px;
+        font-size: 16px;
+    }
+}
+
+/* Large Screens (laptops and small desktops) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+        max-width: 90%;
+    }
+
+    .weather-card, .result-card {
+        padding: 30px;
+        font-size: 18px;
+    }
+}
+
+/* Very Large Screens (wide desktop screens) */
+@media (min-width: 1441px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 1200px;
+        gap: 30px;
+    }
+
+    .weather-card, .result-card {
+        padding: 40px;
+        font-size: 20px;
+    }
+}
