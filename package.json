@@ -1,0 +1,14 @@
+{
+  "name": "Weather-Journal-App",
+  "version": "1.0.0",
+  "description": "",
+  "main": "website/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true,
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1"
+  }
+}
