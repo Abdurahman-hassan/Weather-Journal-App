@@ -1,7 +1,7 @@
 import { populateCountryDropdown, validateZipCode, setBackgroundImage } from './utils.js';
 
 // Personal API Key for OpenWeatherMap API
-const apiKey = process.env.API_KEY + '&units=imperial';
+const apiKey = '3ab118677fb1fe1d01f3eb8817a1fd22&units=imperial';
 const baseURL = 'https://api.openweathermap.org/data/2.5/weather?zip=';
 
 // Populate the country dropdown with selected countries
