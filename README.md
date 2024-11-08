@@ -56,18 +56,6 @@ This Weather Journal App allows users to fetch real-time weather data based on a
     npm install
     ```
 
-4. Create a `.env` file in the root directory and add your OpenWeatherMap API key:
-
-    ```env
-    API_KEY=your_openweathermap_api_key
-    ```
-
-5. In the `app.js` file, replace the `apiKey` variable with your API key from the `.env` file.
-
-    ```javascript
-    const apiKey = process.env.API_KEY + '&units=metric';
-    ```
-
 ## How to Run the Project
 
 1. Start the server:
